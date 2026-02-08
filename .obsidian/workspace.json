@@ -164,13 +164,23 @@
               "icon": "lucide-list",
               "title": "Outline of README"
             }
+          },
+          {
+            "id": "1d24e69cb3f77683",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 450.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,11 +190,16 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-git:Open Git source control": false,
+      "darlal-switcher-plus:Open in Headings Mode": false,
+      "darlal-switcher-plus:Open Symbols for the active editor": false
     }
   },
   "active": "1ffe47940a9001d1",
   "lastOpenFiles": [
+    "Untitled.base",
     "README.md"
   ]
 }

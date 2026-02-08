@@ -51,9 +51,6 @@ agentic-knowledge-base/
 │   ├── system/           # System prompts
 │   └── snippets/         # Reusable fragments
 ├── templates/             # Obsidian templates
-├── projects/              # Project-specific notes
-│   ├── omni-chat/
-│   └── retail-media/
 └── reference/             # Documentation & research
     ├── apis/
     ├── patterns/
