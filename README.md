@@ -1,5 +1,5 @@
-# Obsidian Knowledge Base Playbook
-## AI Development Assets & Multi-Agent Framework
+# Agentic Knowledge Base Playbook
+## AI Engagement Assets
 
 **Purpose:** Centralized, version-controlled repository for prompts, agent definitions, IDE skills, personas, and development documentation.
 
@@ -11,8 +11,8 @@
 
 ```bash
 # Create main vault directory
-mkdir -p ~/choreografii-kb
-cd ~/choreografii-kb
+mkdir -p ~/agentic-knowledge-base
+cd ~/agentic-knowledge-base
 
 # Initialize git
 git init
@@ -27,7 +27,7 @@ mkdir -p {agents,skills,personas,prompts,templates,projects,reference}
 ### 2. Directory Organization
 
 ```
-choreografii-kb/
+agentic-knowledge-base/
 ├── agents/                 # Multi-Agent SDLC Framework agents
 │   ├── architect/
 │   ├── engineer/
