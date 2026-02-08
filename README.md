@@ -303,7 +303,7 @@ How to combine this persona with agents/skills.
 
 ### Morning: Vault Sync
 ```bash
-cd ~/choreografii-kb
+cd ~/agentic-knowledge-base
 git pull
 # Review any changes from other machines
 ```
@@ -321,7 +321,7 @@ git pull
 echo "## {{title}}\n\n{{content}}" >> prompts/snippets/new-snippet.md
 
 # Add to git
-cd ~/choreografii-kb
+cd ~/agentic-knowledge-base
 git add .
 git commit -m "Add: new prompt snippet"
 git push
@@ -329,7 +329,7 @@ git push
 
 ### Evening: Vault Commit
 ```bash
-cd ~/choreografii-kb
+cd ~/agentic-knowledge-base
 git add .
 git commit -m "Update: [description of changes]"
 git push
@@ -344,14 +344,14 @@ git push
 **In .claude/config.json:**
 ```json
 {
-  "skills_path": "~/choreografii-kb/skills",
-  "agents_path": "~/choreografii-kb/agents"
+  "skills_path": "~/agentic-knowledge-base/skills",
+  "agents_path": "~/agentic-knowledge-base/agents"
 }
 ```
 
 **In prompt:**
 ```
-Use the architect agent definition from ~/choreografii-kb/agents/architect/definition.md
+Use the architect agent definition from ~/agentic-knowledge-base/agents/architect/definition.md
 ```
 
 ### 2. Reference from Cursor
@@ -359,17 +359,17 @@ Use the architect agent definition from ~/choreografii-kb/agents/architect/defin
 **In .cursorrules:**
 ```markdown
 # Agent Definitions
-Load agent behaviors from ~/choreografii-kb/agents/
+Load agent behaviors from ~/agentic-knowledge-base/agents/
 
 # Skills
-Reference skills from ~/choreografii-kb/skills/
+Reference skills from ~/agentic-knowledge-base/skills/
 ```
 
 ### 3. Reference from Gemini CLI
 
 ```bash
 # Include agent context in prompt
-gemini -f ~/choreografii-kb/agents/engineer/definition.md "implement feature X"
+gemini -f ~/agentic-knowledge-base/agents/engineer/definition.md "implement feature X"
 ```
 
 ### 4. Symlink to Project
@@ -377,7 +377,7 @@ gemini -f ~/choreografii-kb/agents/engineer/definition.md "implement feature X"
 ```bash
 # Link vault to active project
 cd ~/projects/omni-chat
-ln -s ~/choreografii-kb ./kb
+ln -s ~/agentic-knowledge-base ./kb
 
 # Reference in project
 cat kb/agents/architect/definition.md
@@ -461,13 +461,13 @@ LIMIT 10
 ```bash
 # Time Machine handles this automatically
 # Or manual backup:
-rsync -av ~/choreografii-kb ~/Backups/kb-backup-$(date +%Y%m%d)
+rsync -av ~/agentic-knowledge-base ~/Backups/kb-backup-$(date +%Y%m%d)
 ```
 
 ### Remote Git Repository
 ```bash
 # Add remote (GitHub private repo)
-git remote add origin git@github.com:choreografii/kb.git
+git remote add origin git@github.com/Choreogrifi/agentic-knowledeg-base
 git push -u origin main
 
 # Daily push via cron or Git plugin
@@ -540,9 +540,9 @@ Composite skill combining:
 
 **Reusable context blocks:**
 
-`reference/contexts/choreografii-business.md`:
+`reference/contexts/choreogrifi-business.md`:
 ```markdown
-# Choreografii Business Context
+# Choreogrifi Business Context
 
 ## Company Overview
 [Standard business context to inject into consultancy-related prompts]
@@ -558,7 +558,7 @@ Composite skill combining:
 
 **Usage:**
 ```
-{{reference/contexts/choreografii-business}}
+{{reference/contexts/choreogrifi-business}}
 
 Now, given this context, help me...
 ```
@@ -568,7 +568,7 @@ Now, given this context, help me...
 ## Troubleshooting
 
 ### Obsidian won't open vault
-- Check file permissions: `chmod -R u+rw ~/choreografii-kb`
+- Check file permissions: `chmod -R u+rw ~/agentic-knowledge-base`
 - Check for corrupt .obsidian folder
 - Delete .obsidian/workspace and restart
 
@@ -591,7 +591,7 @@ git commit
 ### Performance issues
 - Exclude large directories in .gitignore
 - Disable heavy plugins temporarily
-- Check vault size: `du -sh ~/choreografii-kb`
+- Check vault size: `du -sh ~/agentic-knowledge-base`
 - Consider splitting into multiple vaults if >1GB
 
 ### Broken links
@@ -656,5 +656,5 @@ git commit
 
 **Version:** 1.0  
 **Last Updated:** 2026-02-08  
-**Maintained By:** Leon @ Choreografii  
+**Maintained By:** Leon @ Choreogrifi  
 **Next Review:** 2026-03-08
